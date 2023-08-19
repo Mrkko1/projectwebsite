@@ -1,0 +1,111 @@
+.news {
+  transform: scale(0.75);
+}
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+#pro {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin-left: 15px;
+}
+
+
+p {
+  text-indent: 3em;    
+}
+
+#greeting {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 1000px);
+  margin-inline: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header header header"
+                       "aside-1 aside-2 aside-2"
+                       "aside-1 main main"
+                       "content2 main main"
+                       "content2 .... ...."
+                       "footer footer footer";
+  grid-gap: 5px;
+  min-height: 90vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main {
+  grid-area: main;
+  background-color: #FFED00;
+  padding: 15px;
+  color: #08085E;
+  margin: 10px;
+  
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #16FF00;
+  border-radius: 75px;
+}
+
+.aside-2 {
+  grid-area: aside-2;
+  background-color: black;
+  color: #FFED00;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+
+.footer {
+  grid-area: footer;
+  border-radius: 75px;
+  padding-bottom: 2px;
+}
+.aside-1 {
+  grid-area: aside-1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.content2 {
+  grid-area: content2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  padding: 10px 0;
+  color: #FFED00;
+  margin-bottom: 10px;
+  border-radius: 10%;
+  text-indent: 3em;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: "header header header"
+                       "aside-2 aside-2 aside-1"
+                       "aside-1 main main"
+                       "main main content2"
+                       "content2 footer footer"
+                       "footer ... ...";
+  }
+}
