@@ -1,7 +1,8 @@
 .news {
   transform: scale(0.75);
 }
-.logo{
+
+.logo {
   width: 50px;
   height: 50px;
 }
@@ -13,9 +14,13 @@
   margin-left: 15px;
 }
 
-
 p {
-  text-indent: 3em;    
+  text-indent: 3em;
+}
+
+p::first-letter {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #greeting {
@@ -31,15 +36,10 @@ p {
 
 .grid-container {
   display: grid;
-  grid-template-areas: "header header header"
-                       "aside-1 aside-2 aside-2"
-                       "aside-1 main main"
-                       "content2 main main"
-                       "content2 .... ...."
-                       "footer footer footer";
+  grid-template-areas: "header header header" "aside-1 aside-2 aside-2" "aside-1 main main" "content2 main main" "content2 .... ...." "footer footer footer";
   grid-gap: 5px;
   min-height: 90vh;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .main {
@@ -48,7 +48,6 @@ p {
   padding: 15px;
   color: #08085E;
   margin: 10px;
-  
 }
 
 .header {
@@ -59,6 +58,12 @@ p {
   padding: 10px 20px;
   background-color: #16FF00;
   border-radius: 75px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
 }
 
 .aside-2 {
@@ -78,14 +83,15 @@ p {
   border-radius: 75px;
   padding-bottom: 2px;
 }
+
 .aside-1 {
   grid-area: aside-1;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
+
 .content2 {
   grid-area: content2;
   display: flex;
@@ -99,13 +105,36 @@ p {
   text-indent: 3em;
   text-align: center;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
   .grid-container {
-    grid-template-areas: "header header header"
-                       "aside-2 aside-2 aside-1"
-                       "aside-1 main main"
-                       "main main content2"
-                       "content2 footer footer"
-                       "footer ... ...";
+    grid-template-areas: "header" "aside-2" "aside-1" "main" "content2" "footer";
   }
 }
+input {
+  background-color: black;
+  color: #FFED00;
+}
+
+input::-moz-placeholder {
+  color: #FFED00;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #FFED00;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fade-in 3s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */
